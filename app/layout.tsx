@@ -4,6 +4,7 @@ import { Lora, Quicksand } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/layout/navbar"
 import Footer from "@/components/layout/footer"
+import { Analytics } from "@vercel/analytics/react"
 
 // Using Lora font
 const lora = Lora({
@@ -45,6 +46,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   )
