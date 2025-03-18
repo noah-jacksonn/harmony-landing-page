@@ -1,0 +1,10 @@
+---
+description: make sure to use tailwind 4.0 when writing CSS, and NOT old versions of tailwind!
+globs: 
+alwaysApply: false
+---
+
+# Your rule content
+
+- You can @ files here
+- You can use markdown but dont have to
