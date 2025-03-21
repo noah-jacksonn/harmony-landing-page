@@ -59,7 +59,7 @@ export default function Navbar() {
               height={100}
               className="h-20 w-auto"
             />
-            <span className={`ml-0 font-semibold text-4xl font-quicksand ${isMenuOpen && isHomepage ? 'text-harmony-blue' : ''}`}>Harmony</span>
+            <span className={`ml-0 font-semibold text-4xl ${isMenuOpen && isHomepage ? 'text-harmony-blue' : ''}`}>Harmony</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -72,7 +72,7 @@ export default function HowHarmonyWorksSection() {
   return (
     <section className="bg-white py-14 px-4 w-full">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-6xl font-bold font-quicksand text-center text-black mb-15">
+        <h2 className="text-6xl font-bold text-center text-black mb-15">
           How Harmony Works
         </h2>
         
