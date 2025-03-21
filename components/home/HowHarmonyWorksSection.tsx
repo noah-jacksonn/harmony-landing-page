@@ -16,14 +16,14 @@ export default function HowHarmonyWorksSection() {
       id: 'emotionally-aware',
       title: 'Emotionally Aware',
       description: 'Harmony is able to detect emotions in your voice, as well as express emotions in its own. This emotional intelligence can help in numerous ways. For example, helping us unblend and recenter when noticing emotions have become overwhelming. Or providing deeper understanding and validation of our feelings.',
-      image: '/audiowave.png',
+      image: '/AudioWave.png',
       imageAlt: 'Sound wave visualization'
     },
     {
       id: 'evidence-based',
       title: 'Evidence Based Modalities',
       description: 'Harmony is fine tuned on proven therapeutic approaches, including IFS (Internal Family Systems), Mindfulness-Based CBT, and Focusing.',
-      image: '/therapistwithclient.png',
+      image: '/TherapistWithClient.png',
       imageAlt: 'Therapy session illustration'
     },
     {
@@ -158,11 +158,15 @@ export default function HowHarmonyWorksSection() {
         </div>
         
         {/* Mobile version - hidden on desktop */}
-        <div className="md:hidden space-y-12">
-          {features.map((feature) => (
+        <div className="md:hidden space-y-20">
+          {features.map((feature, index) => (
             <div 
               key={feature.id} 
-              className="ml-8 mr-4 pl-6 pr-10 border-l-2 border-t-2 border-harmony-blue"
+              className={`${
+                index === 1 
+                  ? 'mr-8 ml-4 pr-10 pl-6 pt-8 border-r-2 border-t-2 border-harmony-blue' // Second block: right and top border
+                  : 'ml-8 mr-4 pl-6 pr-10 pt-8 border-l-2 border-t-2 border-harmony-blue ' // First and third blocks: left and top border
+              }`}
               ref={(el) => {
                 // Only set the ref if it doesn't already exist from the desktop view
                 if (!featureRefs.current[feature.id]) {
@@ -170,7 +174,7 @@ export default function HowHarmonyWorksSection() {
                 }
               }}
             >
-              <h3 className="text-2xl font-bold text-black mb-3">
+              <h3 className="text-2xl font-bold text-black mb-5">
                 {feature.title}
               </h3>
               <p className="text-harmony-dark-gray leading-relaxed">

@@ -67,7 +67,7 @@ export default function Navbar() {
             <Link 
               href="/" 
               className={`font-bold text-lg transition-colors duration-200 ${
-                pathname === "/" ? "opacity-75" : "opacity-100"
+                pathname === "/" ? "opacity-100" : "opacity-75"
               }`}
             >
               Home
@@ -75,7 +75,7 @@ export default function Navbar() {
             <Link
               href="/mission"
               className={`font-bold text-lg transition-colors duration-200 ${
-                pathname === "/mission" ? "opacity-75" : "opacity-100"
+                pathname === "/mission" ? "opacity-100" : "opacity-75"
               }`}
             >
               Our Mission
@@ -106,7 +106,7 @@ export default function Navbar() {
           <Link
             href="/"
             className={`font-bold text-3xl text-harmony-blue transition-colors duration-200 py-3 px-8 hover:bg-gray-50 rounded-lg ${
-              pathname === "/" ? "opacity-75" : "opacity-100"
+              pathname === "/" ? "opacity-100" : "opacity-75"
             }`}
             onClick={() => setIsMenuOpen(false)}
           >
@@ -115,7 +115,7 @@ export default function Navbar() {
           <Link
             href="/mission"
             className={`font-bold text-3xl text-harmony-blue transition-colors duration-200 py-3 px-8 hover:bg-gray-50 rounded-lg ${
-              pathname === "/mission" ? "opacity-75" : "opacity-100"
+              pathname === "/mission" ? "opacity-100" : "opacity-75"
             }`}
             onClick={() => setIsMenuOpen(false)}
           >

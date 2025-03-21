@@ -115,7 +115,7 @@ export default function EmailSignupForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="whitespace-nowrap bg-harmony-blue text-white font-light px-4 py-2 rounded-full hover:bg-opacity-80 transition-colors duration-200 shadow-md"
+          className="whitespace-nowrap bg-harmony-blue text-white font-light px-4 py-2 rounded-full hover:bg-blue-800 transition-colors duration-200 shadow-md"
         >
           {isSubmitting ? 'Submitting...' : 'Sign Up'}
         </button>
