@@ -16,22 +16,22 @@ export default function HowHarmonyWorksSection() {
       id: 'emotionally-aware',
       title: 'Emotionally Aware',
       description: 'Harmony is able to detect emotions in your voice, as well as express emotions in its own. This emotional intelligence can help in numerous ways. For example, helping us unblend and recenter when noticing emotions have become overwhelming. Or providing deeper understanding and validation of our feelings.',
-      image: '/soundwave.png',
+      image: '/audiowave.png',
       imageAlt: 'Sound wave visualization'
     },
     {
       id: 'evidence-based',
       title: 'Evidence Based Modalities',
       description: 'Harmony is fine tuned on proven therapeutic approaches, including IFS (Internal Family Systems), Mindfulness-Based CBT, and Focusing.',
-      image: '/TherapySession.png',
+      image: '/therapistwithclient.png',
       imageAlt: 'Therapy session illustration'
     },
     {
       id: 'memory-insight',
       title: 'Memory and Insight',
       description: 'By remembering information across sessions, Harmony can better keep track of recurring emotional/thought patterns and have novel insights.',
-      image: '/constellation.png',
-      imageAlt: 'Constellation visualization representing memory and insights'
+      image: '/Map.png',
+      imageAlt: 'Map visualization representing memory and insights'
     }
   ];
   
@@ -91,7 +91,10 @@ export default function HowHarmonyWorksSection() {
                 {index % 2 === 0 ? (
                   <>
                     <div 
-                      className={`pl-15 ml-25 border-l-4 border-harmony-blue transform transition-all duration-700 ${
+                      className={`ml-25 pt-8 ${
+                        // First and third block (index 0, 2): left and top border
+                        'border-l-4 border-t-4 border-harmony-blue pl-15'
+                      } transform transition-all duration-700 ${
                         visibleFeatures[feature.id] 
                           ? 'opacity-100 translate-x-0' 
                           : 'opacity-0 -translate-x-24'
@@ -106,7 +109,7 @@ export default function HowHarmonyWorksSection() {
                     </div>
                     
                     <div className="flex justify-center items-center">
-                      <div className="relative w-[425px] h-[300px]">
+                      <div className="relative w-[500px] h-[350px] flex items-center justify-center">
                         <Image
                           src={feature.image}
                           alt={feature.imageAlt}
@@ -120,7 +123,7 @@ export default function HowHarmonyWorksSection() {
                   /* For odd indices (1): Image on left, text on right */
                   <>
                     <div className="flex justify-center items-center">
-                      <div className="relative w-[425px] h-[300px]">
+                      <div className="relative w-[500px] h-[350px] flex items-center justify-center">
                         <Image
                           src={feature.image}
                           alt={feature.imageAlt}
@@ -131,7 +134,10 @@ export default function HowHarmonyWorksSection() {
                     </div>
                     
                     <div 
-                      className={`pl-15 mr-25 border-l-4 border-harmony-blue transform transition-all duration-700 ${
+                      className={`mr-25 pt-8 ${
+                        // Second block (index 1): top and right border
+                        'border-r-4 border-t-4 border-harmony-blue pr-15'
+                      } transform transition-all duration-700 ${
                         visibleFeatures[feature.id] 
                           ? 'opacity-100 translate-x-0' 
                           : 'opacity-0 translate-x-24'

@@ -38,7 +38,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${lora.className} ${lora.variable} ${quicksand.variable} antialiased`}>
+      <body className={`${quicksand.className} ${lora.variable} ${quicksand.variable} antialiased`}>
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-grow">

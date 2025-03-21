@@ -45,7 +45,7 @@ export default function FAQs() {
   };
 
   return (
-    <section className="bg-gradient-to-br from-white to-blue-100 py-12 px-4 sm:px-6 md:px-8 lg:px-12">
+    <section className="bg-white py-12 px-4 sm:px-6 md:px-8 lg:px-12">
       <div className="max-w-3xl mx-auto">
         {/* FAQS Label */}
         <div className="flex justify-center mb-6">
@@ -67,13 +67,13 @@ export default function FAQs() {
         {/* FAQ Items */}
         <div className="space-y-6">
           {faqItems.map((faq, index) => (
-            <div key={index} className="bg-white opacity-80 rounded-3xl shadow-lg p-3 overflow-hidden">
+            <div key={index} className="bg-white rounded-3xl shadow-sm shadow-blue-400 p-3 overflow-hidden relative">
               <button
-                className="w-full px-3 py-3 text-left flex items-center justify-between focus:outline-none"
+                className="w-full px-3 py-3 text-left flex justify-between focus:outline-none"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="text-black text-lg font-medium">{faq.question}</span>
-                <span className={`text-harmony-blue opacity-90 transition-transform duration-300 ${openIndex === index ? 'rotate-45' : ''}`}>
+                <span className="text-black text-lg font-medium pr-8">{faq.question}</span>
+                <span className={`text-harmony-blue transition-transform duration-300 absolute top-4 right-3 origin-center ${openIndex === index ? 'rotate-45' : ''}`}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 4V20M4 12H20" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
@@ -85,7 +85,7 @@ export default function FAQs() {
                   openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="px-3 py-3 text-harmony-dark-gray text-base">
+                <div className="px-3 py-3 text-harmony-dark-gray font-light text-base">
                   {faq.answer}
                 </div>
               </div>

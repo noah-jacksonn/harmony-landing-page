@@ -25,7 +25,7 @@ export default function HeroSection() {
             <div className="w-full max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8">
               The First{" "}
-              <span className="italic font-extrabold text-[125%] text-harmony-blue animate-[pulse-opacity_2s_ease-in-out_infinite] drop-shadow-lg">
+              <span className="italic font-lora font-extrabold text-[130%] text-harmony-blue animate-[pulse-opacity_2s_ease-in-out_infinite] drop-shadow-lg">
                 
                 Emotionally Intelligent
               </span>
