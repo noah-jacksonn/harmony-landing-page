@@ -13,7 +13,7 @@
 
 @keyframes fade-in {
   from {
-    opacity: 0;
+    opacity: .25;
     transform: translateY(10px);
   }
   to {

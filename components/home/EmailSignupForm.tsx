@@ -115,9 +115,18 @@ export default function EmailSignupForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="whitespace-nowrap bg-harmony-blue text-white font-light px-4 py-2 rounded-full hover:bg-blue-800 transition-colors duration-200 shadow-md"
+          className="relative whitespace-nowrap overflow-hidden text-white font-light px-4 py-2 rounded-full shadow-md group"
         >
-          {isSubmitting ? 'Submitting...' : 'Sign Up'}
+          {/* Static background */}
+          <span className="absolute inset-0 bg-harmony-blue rounded-full"></span>
+          
+          {/* Background that slides in on hover */}
+          <span className="absolute inset-0 rounded-full bg-gradient-to-r from-harmony-blue via-blue-600 to-blue-800 translate-x-[-100%] group-hover:translate-x-0 animate-[pulse-opacity_3s_ease-in-out_infinite] transition-transform duration-100 ease-in-out"></span>
+          
+          {/* Button text - kept above the sliding background */}
+          <span className="relative z-10">
+            {isSubmitting ? 'Submitting...' : 'Sign Up'}
+          </span>
         </button>
       </form>
       
