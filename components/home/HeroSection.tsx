@@ -21,7 +21,7 @@ export default function HeroSection() {
         </div>
         
         {/* Content layout with headline and form centered */}
-        <div className="w-full h-screen flex flex-col justify-start items-center pt-6 md:pt-8 lg:pt-10 px-6 md:px-12 lg:px-20">
+        <div className="w-full min-h-screen flex flex-col justify-start items-center pt-6 md:pt-8 lg:pt-10 px-6 md:px-12 lg:px-20 pb-12">
             <div className="w-full max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8">
               The First{" "}

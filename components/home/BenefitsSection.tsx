@@ -96,7 +96,7 @@ export default function BenefitsSection() {
   }, []);
 
   return (
-    <section className="bg-white py-8 px-4 w-full mx-auto -mt-16" ref={sectionRef}>
+    <section className="bg-white py-12 px-4 w-full mx-auto" ref={sectionRef}>
       <h2 className="text-6xl font-bold text-center text-black mb-16">
         Ways Harmony Can Help
       </h2>
