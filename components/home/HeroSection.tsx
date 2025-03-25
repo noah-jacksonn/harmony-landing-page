@@ -1,20 +1,66 @@
+'use client'
 import EmailSignupForm from "./EmailSignupForm"
+import { useEffect, useState } from 'react'
+
+// Safari detection component
+function BackgroundMedia() {
+  const [isSafari, setIsSafari] = useState(false)
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+    
+    // Check if browser is Safari on macOS
+    const userAgent = navigator.userAgent
+    const isMacOS = userAgent.indexOf('Macintosh') > -1
+    const isSafariBrowser = 
+      userAgent.indexOf('Safari') > -1 && 
+      userAgent.indexOf('Chrome') === -1 &&
+      userAgent.indexOf('Edg') === -1
+    
+    setIsSafari(isSafariBrowser && isMacOS)
+  }, [])
+
+  // During SSR and initial render
+  if (!isClient) {
+    return (
+      <div className="absolute top-0 left-0 min-w-full min-h-full bg-harmony-blue/80"></div>
+    )
+  }
+
+  // Safari on Mac gets a still image
+  if (isSafari) {
+    return (
+      <img 
+        src="/MountainsBackground.jpg" 
+        alt="Mountains background image" 
+        className="absolute top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover"
+      />
+    )
+  }
+  
+  // All other browsers get the video
+  return (
+    <video 
+      className="absolute top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover"
+      autoPlay
+      muted
+      loop
+      playsInline
+      disablePictureInPicture
+    >
+      <source src="/LakeVideo.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  )
+}
 
 export default function HeroSection() {
     return (
         <>
         {/* Video Background - Fixed to cover entire viewport */}
         <div className="fixed top-0 left-0 w-screen h-screen z-[-1] overflow-hidden">
-          <video 
-            className="absolute top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover"
-            autoPlay 
-            muted 
-            loop 
-            playsInline
-          >
-            <source src="/LakeVideo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <BackgroundMedia />
           
           {/* Dark overlay */}
           <div className="absolute top-0 left-0 w-full h-full bg-harmony-blue opacity-10"></div>
