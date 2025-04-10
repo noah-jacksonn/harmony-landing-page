@@ -55,11 +55,11 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="Harmony Logo"
-              width={100}
-              height={100}
-              className="h-20 w-auto"
+              width={75}
+              height={75}
+              className="h-12 w-auto"
             />
-            <span className={`ml-0 font-semibold text-4xl ${isMenuOpen && isHomepage ? 'text-harmony-blue' : ''}`}>Harmony</span>
+            <span className={`ml-1 font-semibold text-4xl ${isMenuOpen && isHomepage ? 'text-harmony-blue' : ''}`}>Harmony</span>
           </Link>
 
           {/* Desktop Navigation */}
