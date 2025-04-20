@@ -108,7 +108,7 @@ export default function Navbar() {
             <div className="flex space-x-4">
               <a
                 href="http://app.harmonyappai.com?login=true"
-                className={`border rounded-full px-6 py-2 font-black text-lg transition transform hover:scale-110 duration-200 ${getLoginButtonStyles()}`}
+                className={`border rounded-full px-5 py-1.5 font-black text-lg transition transform hover:scale-110 duration-200 ${getLoginButtonStyles()}`}
               >
                 Login
               </a>
@@ -116,7 +116,7 @@ export default function Navbar() {
                 href="http://app.harmonyappai.com?signup=true"
                 className={`${
                   isHomepage ? "border" : ""
-                } rounded-full px-6 py-2 font-black text-lg transition transform hover:scale-110 duration-200 ${getSignupButtonStyles()}`}
+                } rounded-full px-5 py-1.5 font-black text-lg transition transform hover:scale-110 duration-200 ${getSignupButtonStyles()}`}
               >
                 Sign Up
               </a>
@@ -171,14 +171,14 @@ export default function Navbar() {
           <div className="flex flex-col space-y-6 mt-8 w-4/5 max-w-xs">
             <a
               href="http://app.harmonyappai.com?login=true"
-              className="border-2 border-harmony-blue text-harmony-blue font-black rounded-full py-4 text-2xl transition transform hover:scale-110 duration-200 text-center"
+              className="border-2 border-harmony-blue text-harmony-blue font-black rounded-full py-3 text-2xl transition transform hover:scale-110 duration-200 text-center"
               onClick={() => setIsMenuOpen(false)}
             >
               Login
             </a>
             <a
               href="http://app.harmonyappai.com?signup=true"
-              className="bg-harmony-blue text-white font-black rounded-full py-4 text-2xl transition transform hover:scale-110 duration-200 text-center"
+              className="bg-harmony-blue text-white font-black rounded-full py-3 text-2xl transition transform hover:scale-110 duration-200 text-center"
               onClick={() => setIsMenuOpen(false)}
             >
               Sign Up
