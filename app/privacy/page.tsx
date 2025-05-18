@@ -56,6 +56,13 @@ export default function PrivacyPage() {
             provided at the time of registration (e.g., via Google login).
           </p>
           <p className="text-base text-harmony-light-gray leading-relaxed mb-4">
+            <strong>Optional profile information</strong> — We optionally
+            collect profile information such as date of birth, gender, country,
+            sexual orientation, religious identity, and therapy experience in
+            order to personalize therapy sessions.
+          </p>
+
+          <p className="text-base text-harmony-light-gray leading-relaxed mb-4">
             <strong>Conversation history</strong> — We store your sessions so
             you can access your conversation history.
           </p>
