@@ -100,7 +100,7 @@ export default function HowHarmonyWorksSection() {
                           : 'opacity-0 -translate-x-24'
                       }`}
                     >
-                      <h3 className="text-4xl font-extrabold text-black mb-5">
+                      <h3 className="text-4xl font-semibold text-black mb-5">
                         {feature.title}
                       </h3>
                       <p className="text-harmony-dark-gray leading-relaxed text-lg">
@@ -143,7 +143,7 @@ export default function HowHarmonyWorksSection() {
                           : 'opacity-0 translate-x-24'
                       }`}
                     >
-                      <h3 className="text-4xl font-extrabold text-black mb-5">
+                      <h3 className="text-4xl font-semibold text-black mb-5">
                         {feature.title}
                       </h3>
                       <p className="text-harmony-dark-gray leading-relaxed text-lg">

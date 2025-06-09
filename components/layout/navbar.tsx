@@ -75,7 +75,7 @@ export default function Navbar() {
               className="h-12 w-auto"
             />
             <span
-              className={`ml-1 font-semibold text-4xl ${
+              className={`ml-1 font-semibold text-4xl font-quicksand ${
                 isMenuOpen && isHomepage ? "text-harmony-blue" : ""
               }`}
             >

@@ -1,20 +1,68 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Lora, Quicksand } from "next/font/google"
+import localFont from "next/font/local"
+import { Quicksand } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/layout/navbar"
 import Footer from "@/components/layout/footer"
 import { Analytics } from "@vercel/analytics/react"
 
-// Using Lora font
-const lora = Lora({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-  variable: '--font-lora',
+// Apercu font with all variants
+const apercu = localFont({
+  src: [
+    {
+      path: '../public/apercu/Apercu Pro Light.otf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../public/apercu/Apercu Pro Light Italic.otf',
+      weight: '300',
+      style: 'italic',
+    },
+    {
+      path: '../public/apercu/Apercu Pro Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/apercu/Apercu Pro Italic.otf',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: '../public/apercu/Apercu Pro Medium.otf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../public/apercu/Apercu Pro Medium Italic.otf',
+      weight: '500',
+      style: 'italic',
+    },
+    {
+      path: '../public/apercu/Apercu Pro Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../public/apercu/Apercu Pro Bold Italic.otf',
+      weight: '700',
+      style: 'italic',
+    },
+  ],
+  display: 'swap',
+  variable: '--font-apercu',
 })
 
-// Quicksand font
+// Apercu Mono for code blocks
+const apercuMono = localFont({
+  src: '../public/apercu/Apercu Pro Mono.otf',
+  display: 'swap',
+  variable: '--font-apercu-mono',
+})
+
+// Quicksand font for logo
 const quicksand = Quicksand({
   subsets: ["latin"],
   display: "swap",
@@ -38,7 +86,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${quicksand.className} ${lora.variable} ${quicksand.variable} antialiased`}>
+      <body className={`${apercu.className} ${apercu.variable} ${apercuMono.variable} ${quicksand.variable} antialiased`}>
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-grow">

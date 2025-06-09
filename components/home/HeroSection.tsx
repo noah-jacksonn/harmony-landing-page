@@ -67,15 +67,17 @@ export default function HeroSection() {
       </div>
 
       {/* Content layout with headline and form centered */}
-      <div className="w-full min-h-screen flex flex-col justify-start items-center pt-6 md:pt-8 lg:pt-10 px-6 md:px-12 lg:px-20 pb-12">
-        <div className="w-full max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl mt-7 lg:text-7xl font-bold text-white leading-tight mb-8">
-            The First{" "}
-            <span className="italic font-lora font-extrabold text-[130%] bg-gradient-to-r from-blue-400 via-harmony-blue to-purple-500 bg-clip-text text-transparent animate-[pulse-opacity_3s_ease-in-out_infinite] drop-shadow-lg">
+      <div className="w-full min-h-screen flex flex-col justify-center items-center px-6 md:px-12 lg:px-20">
+        {/* Negative margin to compensate for navbar height (~80px: 48px logo + 32px padding) */}
+        {/* This ensures content is truly centered on viewport, not just within the container */}
+        <div className="w-full max-w-5xl mx-auto text-center -mt-30">
+          <h1 className="text-5xl md:text-6xl lg:text-6xl font-bold text-white leading-relaxed mb-8">
+            The First Ever{" "}
+            <span className="italic font-lora font-extrabold text-[130%] bg-gradient-to-r from-blue-300 via-blue-700 to-purple-400 bg-clip-text text-transparent animate-[pulse-opacity_3s_ease-in-out_infinite] drop-shadow-lg md:whitespace-nowrap">
               Emotionally Intelligent
             </span>
             <br />
-            <span className="text-[75%]">AI-Powered IFS Therapist-Coach</span>
+            <span className="text-[75%]"> IFS-Trained AI Therapist</span>
           </h1>
           {/* Button section - centered underneath the headline with fade-in animation */}
           <div className="w-full max-w-md mx-auto mt-8 animate-[fade-in_1.2s_ease-out_0.5s_both]">

@@ -133,7 +133,7 @@ export default function BenefitsSection() {
                   className="object-contain"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-black mb-1 mt-1">
+              <h3 className="text-xl font-medium text-black mb-1 mt-1">
                 {benefit.title}
               </h3>
               <p className="text-harmony-dark-gray">
