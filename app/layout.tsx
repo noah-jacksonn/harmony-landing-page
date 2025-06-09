@@ -71,8 +71,8 @@ const quicksand = Quicksand({
 })
 
 export const metadata: Metadata = {
-  title: "Harmony: AI-Powered Therapy-Coaching Platform",
-  description: "Harmony is an AI-powered IFS therapy platform combining emotional intelligence with therapeutic expertise to enhance well-being through supporting your mental health and facilitating personal growth.",
+  title: "Harmony: AI Therapy (IFS) & Mental Health Platform",
+  description: "Harmony is an AI-powered therapist trained in modalities such as Internal Family Systems (IFS), combining emotional intelligence and personalized therapeutic support to enhance your mental health and personal growth. Additionally, the platform also provides free mental health courses and resources.",
   icons: {
     icon: "/favicon.ico", 
     apple: "/favicon.ico", 
