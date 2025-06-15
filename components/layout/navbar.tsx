@@ -108,7 +108,7 @@ export default function Navbar() {
             <div className="flex space-x-4">
               <a
                 href="http://app.harmonyappai.com?login=true"
-                className={`border rounded-full px-5 py-1.5 font-black text-lg transition transform hover:scale-110 duration-200 ${getLoginButtonStyles()}`}
+                className={`border rounded-full px-5 py-1 font-black text-lg transition transform hover:scale-110 duration-200 ${getLoginButtonStyles()}`}
               >
                 Login
               </a>
@@ -116,7 +116,7 @@ export default function Navbar() {
                 href="http://app.harmonyappai.com?signup=true"
                 className={`${
                   isHomepage ? "border" : ""
-                } rounded-full px-5 py-1.5 font-black text-lg transition transform hover:scale-110 duration-200 ${getSignupButtonStyles()}`}
+                } rounded-full px-5 py-1 font-black text-lg transition transform hover:scale-110 duration-200 ${getSignupButtonStyles()}`}
               >
                 Sign Up
               </a>
