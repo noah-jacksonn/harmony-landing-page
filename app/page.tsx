@@ -1,7 +1,7 @@
 import HeroSection from "@/components/home/HeroSection"
 import BenefitsSection from "@/components/home/BenefitsSection"
-import HowHarmonyWorksSection from "@/components/home/HowHarmonyWorksSection"
-import FAQs from "@/components/home/FAQs"
+import HowHarmonyWorks from "@/components/home/HowHarmonyWorksSection/HowHarmonyWorks"
+import FAQs from "@/components/home/FAQs/FAQs"
 
 /**
  * Home page for Harmony website with video background
@@ -12,7 +12,7 @@ export default function HomePage() {
     <>
       <HeroSection />
       <BenefitsSection />
-      <HowHarmonyWorksSection />
+      <HowHarmonyWorks />
       <FAQs />
     </>
   )
